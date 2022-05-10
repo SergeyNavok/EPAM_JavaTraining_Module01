@@ -28,7 +28,7 @@ public class Cycle01 {
 			}
 		}
 
-		for (int i = 1; i < userNumber; i++) {
+		for (int i = 1; i <= userNumber; i++) {
 			result += i;
 		}
 

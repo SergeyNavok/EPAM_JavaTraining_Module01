@@ -19,7 +19,7 @@ public class Linear04 {
 		swapNumber(r);
 	}
 
-	public static void swapNumber(double value) {
+	private static void swapNumber(double value) {
 		int wholePart;
 		int residue;
 		double temp;

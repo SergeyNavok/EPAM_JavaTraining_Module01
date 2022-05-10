@@ -15,8 +15,8 @@ public class Cycle07 {
 		int endOfRow;
 		int temp;
 
-		startOfRow = getPositiveIntegerFromConsole("Введите натуральное число m:");
-		endOfRow = getPositiveIntegerFromConsole("Введите натуральное число n:");
+		startOfRow = getPositiveIntegerFromConsole("Enter a natural number m:");
+		endOfRow = getPositiveIntegerFromConsole("Enter a natural number n:");
 
 		if (endOfRow < startOfRow) {
 			temp = startOfRow;
@@ -24,20 +24,20 @@ public class Cycle07 {
 			endOfRow = temp;
 		}
 
-		System.out.printf("Промежуток от %d до %d содержит числа:\n", startOfRow, endOfRow);
+		System.out.printf("The interval from %d to %d contains numbers:\n", startOfRow, endOfRow);
 
 		for (int i = startOfRow; i <= endOfRow; i++) {
-			System.out.println("Число " + i);
+			System.out.println("Number " + i);
 
 			for (int j = SECOND_DIVIDER; j < i; j++) {
 				if (i % (double) j == 0) {
-					System.out.println("	содержит делитель:" + j);
+					System.out.println("	contains divisor:" + j);
 				}
 			}
 		}
 	}
 
-	public static int getPositiveIntegerFromConsole(String message) {
+	private static int getPositiveIntegerFromConsole(String message) {
 		int value;
 
 		value = 0;

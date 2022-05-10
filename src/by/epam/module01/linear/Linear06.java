@@ -20,7 +20,7 @@ public class Linear06 {
 		checkCoordinates(x, y);
 	}
 
-	public static void checkCoordinates(int x, int y) {
+	private static void checkCoordinates(int x, int y) {
 		boolean isBelong;
 
 		isBelong = false;

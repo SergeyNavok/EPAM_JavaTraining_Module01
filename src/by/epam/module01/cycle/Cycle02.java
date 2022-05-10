@@ -17,17 +17,18 @@ public class Cycle02 {
 		functionStep = 0.2;
 
 		for (double i = startOfSegment; i <= endOfSegment; i += functionStep) {
-			System.out.printf("\nПри значении = %.2f, значение функции = %.2f", i, calculateFunction(i));
+			System.out.printf("With value = %.2f, function value is %.2f", i, calculateFunction(i));
+			System.out.println();
 		}
 	}
 
-	public static double calculateFunction(double value) {
+	private static double calculateFunction(double value) {
 		double functionValueByCondition;
 
 		functionValueByCondition = 2;
 
 		if (value <= functionValueByCondition) {
-			return -value;
+			value = value * -1;
 		}
 
 		return value;

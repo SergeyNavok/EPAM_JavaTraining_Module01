@@ -26,7 +26,7 @@ public class Linear01 {
 		System.out.println("Function value = " + result);
 	}
 
-	public static double getFunctionValue(double a, double b, double c) {
+	private static double getFunctionValue(double a, double b, double c) {
 		double value;
 
 		value = ((a - 3) * b / 2.0) + c;

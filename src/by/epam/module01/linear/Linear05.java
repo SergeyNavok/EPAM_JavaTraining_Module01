@@ -23,7 +23,7 @@ public class Linear05 {
 		toTimeFormat(t);
 	}
 
-	public static void toTimeFormat(int value) {
+	private static void toTimeFormat(int value) {
 		int second;
 		int minute;
 		int hour;

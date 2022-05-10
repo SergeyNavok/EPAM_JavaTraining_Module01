@@ -17,7 +17,7 @@ public class Branching05 {
 		calculate(x);
 	}
 
-	public static void calculate(double x) {
+	private static void calculate(double x) {
 		double functionValue;
 		double functionValueByCondition;
 

@@ -15,14 +15,14 @@ public class Cycle08 {
 		checkNumber(number);
 	}
 
-	public static void checkNumber(int number) {
+	private static void checkNumber(int number) {
 		int value;
 		int reverseValue;
 
 		reverseValue = 0;
 		value = Math.abs(number);
 
-		System.out.println("Число " + number + " состоит из следующих цифр: ");
+		System.out.println("The number " + number + " consists of the following numbers: ");
 
 		while (value != 0) {
 			reverseValue *= 10;

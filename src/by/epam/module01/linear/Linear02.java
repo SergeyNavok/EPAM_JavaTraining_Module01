@@ -30,7 +30,7 @@ public class Linear02 {
 		System.out.println("Function value = " + result);
 	}
 
-	public static double getFunctionValue(double a, double b, double c) {
+	private static double getFunctionValue(double a, double b, double c) {
 		double numerator;
 		double denominator;
 		double value1;

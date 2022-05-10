@@ -24,7 +24,7 @@ public class Cycle04 {
 			i++;
 		}
 
-		System.out.println("Максимальное значение для типа long достигнуто на произведении квадратов " + i
-				+ " чисел, и составило = " + result);
+		System.out.println("The maximum value for the 'long' type is reached on the product of squares of " + i
+				+ " numbers, and is = " + result);
 	}
 }

@@ -35,23 +35,25 @@ public class Branching01 {
 		checkTriangle(angle1, angle2);
 	}
 
-	public static void checkTriangle(int angle1, int angle2) {
-		System.out.println("\nТреугольник с углами: " + angle1 + " и " + angle2);
+	private static void checkTriangle(int angle1, int angle2) {
+		System.out.println();
+		System.out.println("Triangle with angles: " + angle1 + " and " + angle2);
 
 		if (angle1 > 90 || angle1 < 1 || angle2 > 90 || angle2 < 1) {
-			System.out.println("Угол треугольника может быть в диапазоне от 1 до 90 град.");
+			System.out.println("The angle of the triangle can range from 1 to 90 degrees!");
 			return;
 		}
 
 		if (angle1 + angle2 >= 180) {
-			System.out.println("Сумма углов треугольника не может быть равна или быть более 180 град.");
+			System.out
+					.println("The sum of the two angles of a triangle cannot be greater than or equal to 180 degrees!");
 			return;
 		}
 
-		System.out.println("Треугольник с заданными углами может существовать");
+		System.out.println("A triangle with given angles can exist.");
 
 		if (angle1 == 90 || angle2 == 90 || 180 - angle1 - angle2 == 90) {
-			System.out.println("Этот треугольник является равносторонним");
+			System.out.println("This triangle is equilateral.");
 		}
 	}
 }

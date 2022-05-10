@@ -25,7 +25,7 @@ public class Cycle05 {
 		findSum(startOfRow, endOfRow, e);
 	}
 
-	public static void findSum(int startOfRow, int endOfRow, int e) {
+	private static void findSum(int startOfRow, int endOfRow, int e) {
 		int counter;
 		double temp;
 		double result;
@@ -43,7 +43,7 @@ public class Cycle05 {
 			}
 		}
 
-		System.out.printf("Условию соответствовали %d число(а) ряда, сумма = %.2f", counter, result);
+		System.out.printf("The condition was matched by %d number(s) in the range, sum = %.2f", counter, result);
 		System.out.println();
 	}
 }

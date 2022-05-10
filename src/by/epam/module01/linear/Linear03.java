@@ -21,7 +21,7 @@ public class Linear03 {
 		System.out.println("Result = " + result);
 	}
 
-	public static double getFunctionValue(double x, double y) {
+	private static double getFunctionValue(double x, double y) {
 		double numerator;
 		double denominator;
 		double value;

@@ -35,24 +35,25 @@ public class Branching04 {
 		brickCheck(a, b, x, y, z);
 	}
 
-	public static void brickCheck(int a, int b, int x, int y, int z) {
-		System.out.printf("\nКирпич %d*%d*%d ", x, y, z);
+	private static void brickCheck(int a, int b, int x, int y, int z) {
+		System.out.println();
+		System.out.printf("Brick %2d*%2d*%2d ", x, y, z);
 
 		if (x <= a && y <= b) {
-			System.out.printf(" пройдет через отверстие %d*%d", a, b);
+			System.out.printf("will go through the hole %d*%d", a, b);
 			return;
 		}
 
 		if (x <= a && z <= b) {
-			System.out.printf(" пройде через отверстие %d*%d", a, b);
+			System.out.printf("will go through the hole %d*%d", a, b);
 			return;
 		}
 
 		if (y <= a && z <= b) {
-			System.out.printf(" пройдет через отверстие %d*%d", a, b);
+			System.out.printf("will go through the hole %d*%d", a, b);
 			return;
 		}
 
-		System.out.printf("НЕ пройдет через отверстие %d*%d", a, b);
+		System.out.printf("WILL NOT go through the hole %d*%d", a, b);
 	}
 }

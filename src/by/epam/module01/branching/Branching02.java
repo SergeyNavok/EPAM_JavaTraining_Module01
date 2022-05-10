@@ -24,19 +24,19 @@ public class Branching02 {
 		maxOfTheMin(a, b, c, d);
 	}
 
-	public static void maxOfTheMin(int x1, int x2, int y1, int y2) {
+	private static void maxOfTheMin(int x1, int x2, int y1, int y2) {
 		int xMin;
 		int yMin;
 
 		xMin = x1 < x2 ? x1 : x2;
 		yMin = y1 < y2 ? y1 : y2;
 
-		System.out.printf("В наборе max{min(%d, %d), min(%d, %d)} - ", x1, x2, y1, y2);
+		System.out.printf("In set max{min(%d, %d), min(%d, %d)} - ", x1, x2, y1, y2);
 
 		if (xMin > yMin) {
-			System.out.printf("наибольшее из наименьших %d", xMin);
+			System.out.printf("largest of the smallest %d", xMin);
 		} else {
-			System.out.printf("наибольшее из наименьших %d", yMin);
+			System.out.printf("largest of the smallest %d", yMin);
 		}
 
 		System.out.println();
