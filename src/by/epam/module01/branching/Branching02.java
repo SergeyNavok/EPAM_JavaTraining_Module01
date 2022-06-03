@@ -3,6 +3,7 @@ package by.epam.module01.branching;
 /*
 Найти max{min(a, b), min(c, d)}
 */
+
 public class Branching02 {
 
 	public static void main(String[] args) {
@@ -15,16 +16,16 @@ public class Branching02 {
 		b = 2;
 		c = 3;
 		d = 4;
-		maxOfTheMin(a, b, c, d);
+		printMaxOfTheMin(a, b, c, d);
 
 		a = 12;
 		b = 9;
 		c = 0;
 		d = -22;
-		maxOfTheMin(a, b, c, d);
+		printMaxOfTheMin(a, b, c, d);
 	}
 
-	private static void maxOfTheMin(int x1, int x2, int y1, int y2) {
+	private static void printMaxOfTheMin(int x1, int x2, int y1, int y2) {
 		int xMin;
 		int yMin;
 

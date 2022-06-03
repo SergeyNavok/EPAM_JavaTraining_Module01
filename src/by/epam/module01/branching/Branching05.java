@@ -5,30 +5,35 @@ package by.epam.module01.branching;
 F(x) = x(2) - 3x + 9, если x <= 3,
 F(x) = 1 / (x^3 + 6), если x > 3
 */
+
 public class Branching05 {
 
 	public static void main(String[] args) {
 		int x;
 
 		x = 3;
-		calculate(x);
+		printCalculateFunction(x);
 
 		x = -2;
-		calculate(x);
+		printCalculateFunction(x);
 	}
 
-	private static void calculate(double x) {
-		double functionValue;
+	private static void printCalculateFunction(double value) {
+		double result;
+		double functionValue1;
+		double functionValue2;
 		double functionValueByCondition;
 
+		functionValue1 = Math.pow(value, 2) - 3 * value + 9;
+		functionValue2 = 1 / (Math.pow(value, 3) + 6);
 		functionValueByCondition = 3;
 
-		if (x <= functionValueByCondition) {
-			functionValue = Math.pow(x, 2) - 3 * x + 9;
+		if (value <= functionValueByCondition) {
+			result = functionValue1;
 		} else {
-			functionValue = 1 / (Math.pow(x, 3) + 6);
+			result = functionValue2;
 		}
 
-		System.out.println("Function value at x(" + x + ") = " + functionValue);
+		System.out.println("Function value at (" + value + ") = " + result);
 	}
 }

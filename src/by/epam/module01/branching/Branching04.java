@@ -4,56 +4,57 @@ package by.epam.module01.branching;
 Заданы размеры А, В прямоугольного отверстия и размеры х, у, z  кирпича. 
 Определить, пройдет ли кирпич через отверстие.
 */
+
 public class Branching04 {
 
 	public static void main(String[] args) {
-		int a;
-		int b;
-		int x;
-		int y;
-		int z;
+		int holeX;
+		int holeY;
+		int brickX;
+		int brickY;
+		int brickZ;
 
-		a = 2;
-		b = 5;
-		x = 2;
-		y = 5;
-		z = 1;
-		brickCheck(a, b, x, y, z);
+		holeX = 2;
+		holeY = 5;
+		brickX = 2;
+		brickY = 5;
+		brickZ = 1;
+		brickCheck(holeX, holeY, brickX, brickY, brickZ);
 
-		a = 2;
-		b = 5;
-		x = 1;
-		y = 10;
-		z = 1;
-		brickCheck(a, b, x, y, z);
+		holeX = 2;
+		holeY = 5;
+		brickX = 1;
+		brickY = 10;
+		brickZ = 1;
+		brickCheck(holeX, holeY, brickX, brickY, brickZ);
 
-		a = 2;
-		b = 5;
-		x = 2;
-		y = 6;
-		z = 13;
-		brickCheck(a, b, x, y, z);
+		holeX = 2;
+		holeY = 5;
+		brickX = 2;
+		brickY = 6;
+		brickZ = 13;
+		brickCheck(holeX, holeY, brickX, brickY, brickZ);
 	}
 
-	private static void brickCheck(int a, int b, int x, int y, int z) {
+	private static void brickCheck(int holeX, int holeY, int brickX, int brickY, int brickZ) {
 		System.out.println();
-		System.out.printf("Brick %2d*%2d*%2d ", x, y, z);
+		System.out.printf("Brick %2d*%2d*%2d ", brickX, brickY, brickZ);
 
-		if (x <= a && y <= b) {
-			System.out.printf("will go through the hole %d*%d", a, b);
+		if (brickX <= holeX && brickY <= holeY) {
+			System.out.printf("will go through the hole %d*%d", holeX, holeY);
 			return;
 		}
 
-		if (x <= a && z <= b) {
-			System.out.printf("will go through the hole %d*%d", a, b);
+		if (brickX <= holeX && brickZ <= holeY) {
+			System.out.printf("will go through the hole %d*%d", holeX, holeY);
 			return;
 		}
 
-		if (y <= a && z <= b) {
-			System.out.printf("will go through the hole %d*%d", a, b);
+		if (brickY <= holeX && brickZ <= holeY) {
+			System.out.printf("will go through the hole %d*%d", holeX, holeY);
 			return;
 		}
 
-		System.out.printf("WILL NOT go through the hole %d*%d", a, b);
+		System.out.printf("WILL NOT go through the hole %d*%d", holeX, holeY);
 	}
 }

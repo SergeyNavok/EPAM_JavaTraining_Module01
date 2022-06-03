@@ -7,6 +7,7 @@ package by.epam.module01.cycle;
 a(n) = --- + ---
        2^n   3^n
 */
+
 public class Cycle05 {
 
 	public static void main(String[] args) {
@@ -17,28 +18,27 @@ public class Cycle05 {
 		startOfRow = 0;
 		endOfRow = 6;
 		e = 2;
-		findSum(startOfRow, endOfRow, e);
+		printFunctionValue(startOfRow, endOfRow, e);
 
 		startOfRow = -3;
 		endOfRow = 6;
 		e = 3;
-		findSum(startOfRow, endOfRow, e);
+		printFunctionValue(startOfRow, endOfRow, e);
 	}
 
-	private static void findSum(int startOfRow, int endOfRow, int e) {
+	private static void printFunctionValue(int startOfRow, int endOfRow, int e) {
 		int counter;
-		double temp;
+		double function;
 		double result;
 
 		counter = 0;
-		temp = 0;
 		result = 0;
 
 		for (int i = startOfRow; i <= endOfRow; i++) {
-			temp = (1 / Math.pow(2, i)) + (1 / Math.pow(3, i));
+			function = (1 / Math.pow(2, i)) + (1 / Math.pow(3, i));
 
-			if (Math.abs(temp) >= e) {
-				result += temp;
+			if (Math.abs(function) >= e) {
+				result += function;
 				counter++;
 			}
 		}

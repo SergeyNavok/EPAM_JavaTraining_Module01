@@ -4,34 +4,41 @@ package by.epam.module01.linear;
 Дано действительное число R  вида nnn.ddd  (три цифровых разряда в дробной и целой частях). 
 Поменять местами дробную и целую части числа и вывести полученное значение числа.
 */
+
 public class Linear04 {
 
 	public static void main(String[] args) {
-		double r;
+		double number;
 
-		r = 222.111;
-		swapNumber(r);
+		number = 222.111;
+		printSwapNumber(number);
 
-		r = -111.999;
-		swapNumber(r);
+		number = -111.999;
+		printSwapNumber(number);
 
-		r = 898.989;
-		swapNumber(r);
+		number = 898.989;
+		printSwapNumber(number);
 	}
 
-	private static void swapNumber(double value) {
-		int wholePart;
-		int residue;
+	private static void printSwapNumber(double value) {
+		double oneThousand;
 		double temp;
 
+		oneThousand = 1000;
 		temp = Math.abs(value);
+
+		int wholePart;
+		int residue;
+
 		wholePart = (int) temp;
 		temp = temp % 1;
 
-		// Если не делать округление, то идет потеря точности в вычислениях
-		residue = (int) Math.round(temp * 1000);
+		// Т.к. по условию модуля нельзя использовать классы-оболочки -
+		// необходимо делать округление, иначе идет потеря точности в вычислениях типа
+		// double
+		residue = (int) Math.round(temp * oneThousand);
 
-		temp = residue + wholePart / 1000.0;
+		temp = residue + wholePart / oneThousand;
 
 		System.out.println("Old value= " + value + ", new value= " + temp);
 	}

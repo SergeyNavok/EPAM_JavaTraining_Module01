@@ -31,20 +31,20 @@ public class Linear02 {
 	}
 
 	private static double getFunctionValue(double a, double b, double c) {
-		double numerator;
-		double denominator;
-		double value1;
-		double value2;
+		double numeratorFunction;
+		double denominatorFunction;
+		double valueFunction1;
+		double valueFunction2;
 		double temp;
 		double result;
 
 		temp = Math.pow(b, 2) * 4 * a * c;
-		numerator = b + Math.sqrt(temp);
-		denominator = 2 * a;
-		value1 = Math.pow(a, 3) * c;
-		value2 = Math.pow(b, -2);
+		numeratorFunction = b + Math.sqrt(temp);
+		denominatorFunction = 2 * a;
+		valueFunction1 = Math.pow(a, 3) * c;
+		valueFunction2 = Math.pow(b, -2);
 
-		result = numerator / denominator - value1 + value2;
+		result = numeratorFunction / denominatorFunction - valueFunction1 + valueFunction2;
 
 		return result;
 	}

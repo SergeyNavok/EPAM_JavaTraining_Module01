@@ -6,22 +6,24 @@ import java.util.Scanner;
 Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа. 
 m и n вводятся с клавиатуры.
 */
+
 public class Cycle07 {
 
 	public static void main(String[] args) {
+		final int ZERO = 0;
 		final int SECOND_DIVIDER = 2;
 
 		int startOfRow;
 		int endOfRow;
-		int temp;
+		int tempValue;
 
 		startOfRow = getPositiveIntegerFromConsole("Enter a natural number m:");
 		endOfRow = getPositiveIntegerFromConsole("Enter a natural number n:");
 
 		if (endOfRow < startOfRow) {
-			temp = startOfRow;
+			tempValue = startOfRow;
 			startOfRow = endOfRow;
-			endOfRow = temp;
+			endOfRow = tempValue;
 		}
 
 		System.out.printf("The interval from %d to %d contains numbers:\n", startOfRow, endOfRow);
@@ -30,7 +32,7 @@ public class Cycle07 {
 			System.out.println("Number " + i);
 
 			for (int j = SECOND_DIVIDER; j < i; j++) {
-				if (i % (double) j == 0) {
+				if (i % (double) j == ZERO) {
 					System.out.println("	contains divisor:" + j);
 				}
 			}
@@ -38,6 +40,8 @@ public class Cycle07 {
 	}
 
 	private static int getPositiveIntegerFromConsole(String message) {
+		final int ZERO = 0;
+
 		int value;
 
 		value = 0;
@@ -54,9 +58,8 @@ public class Cycle07 {
 				sc.next();
 			}
 
-		} while (value <= 0);
+		} while (value <= ZERO);
 
 		return value;
 	}
-
 }

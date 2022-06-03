@@ -5,34 +5,40 @@ package by.epam.module01.linear;
 Вывести данное значение длительности в часах, минутах и секундах в следующей форме:
 ННч ММмин SSc.
 */
+
 public class Linear05 {
 
 	public static void main(String[] args) {
-		int t;
+		int timeSec;
 
-		t = 61;
-		toTimeFormat(t);
+		timeSec = 61;
+		printTimeFormat(timeSec);
 
-		t = 3599;
-		toTimeFormat(t);
+		timeSec = 3599;
+		printTimeFormat(timeSec);
 
-		t = 3601;
-		toTimeFormat(t);
+		timeSec = 3601;
+		printTimeFormat(timeSec);
 
-		t = 13858;
-		toTimeFormat(t);
+		timeSec = 13858;
+		printTimeFormat(timeSec);
 	}
 
-	private static void toTimeFormat(int value) {
+	private static void printTimeFormat(int value) {
+		final int SECONDS_IN_MINUTE = 60;
+		final int SECONDS_IN_HOUR = 3600;
+		final int MINUTES_IN_HOUR = 60;
+
 		int second;
 		int minute;
 		int hour;
 
-		second = value % 60;
-		hour = value / 3600;
-		minute = (value - second - hour * 3600) / 60;
+		second = value % SECONDS_IN_MINUTE;
+		hour = value / SECONDS_IN_HOUR;
+		minute = value - second - (hour * SECONDS_IN_HOUR);
+		minute /= MINUTES_IN_HOUR;
 
-		System.out.printf("%d second(s)\t- is %02dhour %02dmin %02dsec", value, hour, minute, second);
+		System.out.printf("%d second(s)\t- is %02d hour %02d min %02d sec", value, hour, minute, second);
 		System.out.println();
 	}
 }

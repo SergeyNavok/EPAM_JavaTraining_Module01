@@ -3,6 +3,7 @@ package by.epam.module01.cycle;
 /*
 Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
 */
+
 public class Cycle08 {
 
 	public static void main(String[] args) {
@@ -16,25 +17,28 @@ public class Cycle08 {
 	}
 
 	private static void checkNumber(int number) {
-		int value;
-		int reverseValue;
+		final int ZERO = 0;
+		final int TEN = 10;
 
-		reverseValue = 0;
-		value = Math.abs(number);
+		int copyNumber;
+		int value;
+
+		copyNumber = Math.abs(number);
+		value = 0;
 
 		System.out.println("The number " + number + " consists of the following numbers: ");
 
-		while (value != 0) {
-			reverseValue *= 10;
-			reverseValue += value % 10;
-			value /= 10;
+		while (copyNumber != ZERO) {
+			value *= TEN;
+			value += copyNumber % TEN;
+			copyNumber /= TEN;
 		}
 
-		while (reverseValue != 0) {
-			value = reverseValue % 10;
-			reverseValue /= 10;
+		while (value != ZERO) {
+			copyNumber = value % TEN;
+			value /= TEN;
 
-			System.out.printf("%d, ", value);
+			System.out.printf("%d, ", copyNumber);
 		}
 
 		System.out.println();
